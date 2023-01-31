@@ -1,10 +1,11 @@
-import Card from "./Card/Card";
+import FlagCard from "./Card/FlagCard";
+import CapitalCard from "./Card/CapitalCard";
 
 export const FlashCardList = ({ flashcards }) => {
   return (
     <div class="grid items-center gap-5 my-grid-template-col">
       {flashcards.map((flashcard) => {
-        return <Card flashcard={flashcard} key={flashcard.id} />;
+        return <CapitalCard flashcard={flashcard} key={flashcard.id} />;
       })}
     </div>
   );
