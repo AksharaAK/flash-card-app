@@ -9,13 +9,15 @@
 const SAMPLE = [
   {
     id: 1,
-    question: "Question1",
-    answer: "Answer1",
+    country: "Question1",
+    capital: "Answer1",
+    flag: "https://res.cloudinary.com/dt5gwt7vu/image/upload/v1633148777/flags/arg.svg",
   },
   {
     id: 2,
-    question: "Question2",
-    answer: "Answer2",
+    country: "Question2",
+    capital: "Answer2",
+    flag: "https://res.cloudinary.com/dt5gwt7vu/image/upload/v1633148777/flags/arg.svg",
   },
 ];
 

@@ -12,8 +12,8 @@ export default function App() {
       method: "GET",
       url: "https://country-facts.p.rapidapi.com/region/america",
       headers: {
-        "X-RapidAPI-Key": "034a24fad4msh8b68ad16be3f3e1p16ce27jsn72fc68a8d3c0",
-        "X-RapidAPI-Host": "country-facts.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
+        "X-RapidAPI-Host": process.env.RAPIDAPI_HOST,
       },
     };
 
@@ -24,12 +24,12 @@ export default function App() {
           response.data.map((countryItem, index) => {
             return {
               id: index,
-              question: countryItem.name.common,
-              answer: countryItem.capital,
+              country: countryItem.name.common,
+              capital: countryItem.capital,
+              flag: countryItem.flag,
             };
           })
         );
-        console.log(response.data);
       })
       .catch((error) => {
         console.error(error);
