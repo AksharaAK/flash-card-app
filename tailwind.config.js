@@ -17,17 +17,22 @@ const customClass = plugin(({ addUtilities }) => {
       "backface-visibility": "hidden",
       "-webkit-backface-visibility": "hidden",
     },
+    ".my-grid-template-col": {
+      "grid-template-columns": "repeat(auto-fill, minmax(200px, 1fr))",
+    },
   });
 });
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    colors: {
-      "primary-red": "#bf0603",
-      "primary-blue": "#001427",
-      neutral: "#f4d58d",
-      "secondary-red": "#8d0801",
-      "secondary-blue": "#708d81",
+    extend: {
+      colors: {
+        "primary-red": "#bf0603",
+        "primary-blue": "#001427",
+        neutral: "#f4d58d",
+        "secondary-red": "#8d0801",
+        "secondary-blue": "#708d81",
+      },
     },
   },
   plugins: [customClass],
