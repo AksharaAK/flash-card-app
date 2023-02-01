@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FlashCardList from "./Components/FlashCardList";
 import Header from "./Components/Header";
+import GlobeLogo from "./Components/GlobeLogo";
 import SAMPLE from "./data/mock_data";
 import axios from "axios";
 
@@ -37,7 +38,7 @@ export default function App() {
   }, []);
 
   return (
-    <div class="border-box flex h-screen w-screen flex-col overflow-scroll p-5">
+    <div class="border-box flex h-screen w-screen flex-col overflow-scroll">
       <Header />
       <FlashCardList flashcards={flashcards} />
     </div>
