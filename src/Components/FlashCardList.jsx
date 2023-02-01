@@ -3,7 +3,7 @@ import CapitalCard from "./Card/CapitalCard";
 
 export const FlashCardList = ({ flashcards }) => {
   return (
-    <div class="grid items-center gap-5 my-grid-template-col">
+    <div class="mx-auto grid w-full max-w-5xl items-center justify-center gap-5 py-10 my-grid-template-col">
       {flashcards.map((flashcard) => {
         return <CapitalCard flashcard={flashcard} key={flashcard.id} />;
       })}
