@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import FlashCardList from "./Components/FlashCardList";
 import Header from "./Components/Header";
-import GlobeLogo from "./Components/GlobeLogo";
 import SAMPLE from "./data/mock_data";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import axios from "axios";
+import FlagQuiz from "./Components/FlagQuiz";
+import CapitalsQuiz from "./Components/CapitalsQuiz";
 
 export default function App() {
   const [flashcards, setFlashcards] = useState(SAMPLE);
@@ -13,8 +14,8 @@ export default function App() {
       method: "GET",
       url: "https://country-facts.p.rapidapi.com/region/america",
       headers: {
-        "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
-        "X-RapidAPI-Host": process.env.RAPIDAPI_HOST,
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPIKEY,
+        "X-RapidAPI-Host": process.env.REACT_APP_RAPIDAPIHOST,
       },
     };
 
@@ -38,9 +39,22 @@ export default function App() {
   }, []);
 
   return (
-    <div class="border-box flex h-screen w-screen flex-col overflow-scroll">
+    <div>
       <Header />
-      <FlashCardList flashcards={flashcards} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<FlagQuiz flashcards={flashcards} />} />
+        </Routes>
+        <Routes>
+          <Route path="/flags" element={<FlagQuiz flashcards={flashcards} />} />
+        </Routes>
+        <Routes>
+          <Route
+            path="/capitals"
+            element={<CapitalsQuiz flashcards={flashcards} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
