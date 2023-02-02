@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export const Card = ({ flashcard }) => {
   const [flip, setFlip] = useState(false);
-  console.log(flashcard.flag);
 
   return (
     <div
@@ -12,13 +11,13 @@ export const Card = ({ flashcard }) => {
       onClick={() => setFlip(!flip)}
     >
       <div
-        class={`relative flex h-full w-full items-center justify-center rounded-lg  p-2 font-semibold  `}
+        class={`relative flex h-full w-full items-center justify-center rounded-lg bg-black/40  p-2 font-semibold  `}
       >
         <div class="absolute inset-0">
           <img
             alt="flag of the country"
             src={flashcard.flag}
-            class="object-stretch absolute h-full w-full rounded-lg bg-black/40 shadow-2xl shadow-black/40"
+            class="object-stretch absolute h-full w-full rounded-lg  shadow-2xl shadow-black/40"
           />
         </div>
       </div>

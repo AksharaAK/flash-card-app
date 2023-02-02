@@ -1,13 +1,13 @@
 export const Header = () => {
   return (
-    <nav class="sticky top-0 z-10 bg-teal-800/70  font-semibold tracking-tighter">
+    <nav class="sticky top-0 z-10 bg-black  font-semibold tracking-tighter">
       <div class="mx-auto max-w-5xl">
         <div class="flex justify-around">
           <a href="#" class="flex flex-col items-center py-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#0d9488"
+              fill="white"
               class="mr-1 h-6 w-6 "
             >
               <path d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
@@ -19,18 +19,18 @@ export const Header = () => {
             </svg>
           </a>
           <div class="flex flex-col items-center justify-center">
-            <h1 class=" text-base font-bold uppercase  tracking-tighter text-teal-500">
+            <h1 class=" text-base font-bold uppercase  tracking-tighter text-white">
               Around the World
             </h1>
-            <h6 class=" lead text- text-xs font-semibold uppercase text-teal-600 ">
+            <h6 class=" lead text- text-xs font-semibold uppercase text-white ">
               in x days
             </h6>
           </div>
           <div class="flex items-center space-x-10 ">
-            <a href="/capitals" class="py-4 text-sm text-teal-600">
+            <a href="/capitals" class="py-4 text-sm text-white">
               Capitals
             </a>
-            <a href="/flags" class="py-4 text-sm text-teal-600">
+            <a href="/flags" class="py-4 text-sm text-white">
               Flags
             </a>
           </div>
