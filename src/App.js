@@ -3,16 +3,22 @@ import Header from "./Components/Header";
 import SAMPLE from "./data/mock_data";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import axios from "axios";
+import { ContinentPicker } from "./Components/ContinentPicker";
 import FlagQuiz from "./Components/FlagQuiz";
 import CapitalsQuiz from "./Components/CapitalsQuiz";
 
 export default function App() {
   const [flashcards, setFlashcards] = useState(SAMPLE);
 
+  const [continent, setContinent] = useState("america");
+  const continentChangeHandler = (e) => {
+    setContinent(e.target.value);
+  };
+
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://country-facts.p.rapidapi.com/region/america",
+      url: `https://country-facts.p.rapidapi.com/region/${continent}`,
       headers: {
         "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPIKEY,
         "X-RapidAPI-Host": process.env.REACT_APP_RAPIDAPIHOST,
@@ -36,11 +42,15 @@ export default function App() {
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, [continent]);
 
   return (
     <div>
       <Header />
+      <ContinentPicker
+        continent={continent}
+        continentChangeHandler={continentChangeHandler}
+      />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FlagQuiz flashcards={flashcards} />} />
