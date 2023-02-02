@@ -4,8 +4,11 @@ const plugin = require("tailwindcss/plugin");
 
 const customClass = plugin(({ addUtilities }) => {
   addUtilities({
-    ".my-rotate-y-180": {
+    ".my-rotate-x-180": {
       transform: "rotateX(180deg)",
+    },
+    ".my-rotate-y-180": {
+      transform: "rotateY(180deg)",
     },
     ".preserve-3d": {
       transformStyle: "preserve-3d",
@@ -35,7 +38,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ppink: "#510087",
+        "overlay-pink": "#510087",
+        "overlay-purple": "#190028",
       },
     },
   },
