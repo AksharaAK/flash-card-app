@@ -1,10 +1,11 @@
 export const ContinentPicker = ({ continent, continentChangeHandler }) => {
   return (
-    <div class="border-box mx-auto flex h-full w-full justify-around border-t-2 border-overlay-purple bg-black p-5 text-center text-xs text-slate-500">
-      <label>
-        Choose a Continent
+    <div class="border-box h-full w-full bg-black/40 p-5 text-center text-xs text-slate-300">
+      <div class="mx-auto flex max-w-2xl justify-center">
+        <label htmlFor="continentSelection">Choose a Continent to Study</label>
         <select
-          class="mx-3 w-fit border-2 border-overlay-pink bg-black px-5  text-slate-500"
+          id="continentSelection"
+          class="mx-3 w-fit border-2 border-overlay-pink/80 bg-black px-5  text-slate-400"
           name="selectedContinent"
           value={continent}
           onChange={continentChangeHandler}
@@ -15,7 +16,7 @@ export const ContinentPicker = ({ continent, continentChangeHandler }) => {
           <option value="europe">Europe</option>
           <option value="oceania">Oceania</option>
         </select>
-      </label>
+      </div>
     </div>
   );
 };

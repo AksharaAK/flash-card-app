@@ -23,13 +23,9 @@ const customClass = plugin(({ addUtilities }) => {
     ".my-grid-template-col": {
       "grid-template-columns": "repeat(auto-fill, minmax(200px, 1fr))",
     },
-    ".my-bg-capitals-hero": {
+    ".my-bg-hero": {
       "background-image":
         "url('https://images.pexels.com/photos/9494911/pexels-photo-9494911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
-    },
-    ".my-bg-flags-hero": {
-      "background-image":
-        "url('https://images.pexels.com/photos/9494919/pexels-photo-9494919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
     },
   });
 });
