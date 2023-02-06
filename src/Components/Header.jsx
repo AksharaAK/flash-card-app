@@ -17,10 +17,16 @@ export const Header = () => {
             </h6>
           </div>
           <div class="flex items-center space-x-10 ">
-            <a href="/capitals" class="py-4 text-sm text-white">
+            <a
+              href="/capitals"
+              class="py-4 text-sm text-white hover:text-slate-400"
+            >
               Capitals
             </a>
-            <a href="/flags" class="py-4 text-sm text-white">
+            <a
+              href="/flags"
+              class="py-4 text-sm text-white hover:text-slate-400"
+            >
               Flags
             </a>
           </div>
