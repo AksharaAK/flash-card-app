@@ -12,20 +12,20 @@ export const Header = () => {
             <h1 class=" text-base font-bold uppercase  tracking-tighter text-white">
               Around the World
             </h1>
-            <h6 class=" lead text- text-xs font-semibold uppercase text-white ">
+            <h6 class=" lead text- text-xs font-semibold uppercase text-custom-grey ">
               in x days
             </h6>
           </div>
           <div class="flex items-center space-x-10 ">
             <a
               href="/capitals"
-              class="py-4 text-sm text-white hover:text-slate-400"
+              class="py-4 text-sm text-white hover:text-custom-grey"
             >
               Capitals
             </a>
             <a
               href="/flags"
-              class="py-4 text-sm text-white hover:text-slate-400"
+              class="py-4 text-sm text-white hover:text-custom-grey"
             >
               Flags
             </a>

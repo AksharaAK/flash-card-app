@@ -36,6 +36,8 @@ module.exports = {
       colors: {
         "overlay-pink": "#510087",
         "overlay-purple": "#190028",
+        "icon-pink": "#9d30b3",
+        "custom-grey": "#94a3b8",
       },
     },
   },
