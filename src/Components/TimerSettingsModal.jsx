@@ -26,7 +26,7 @@ export const TimerSettingsModal = ({ setIsModalOpen }) => {
                   value={settingsInfo.workMins}
                   onChange={(event, newVal) => settingsInfo.setWorkMins(newVal)}
                   step={5}
-                  min={1}
+                  min={5}
                   max={90}
                 />
               </div>
@@ -44,7 +44,7 @@ export const TimerSettingsModal = ({ setIsModalOpen }) => {
                     settingsInfo.setBreakMins(newVal)
                   }
                   step={5}
-                  min={1}
+                  min={5}
                   max={30}
                 />
               </div>

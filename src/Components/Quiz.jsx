@@ -1,11 +1,11 @@
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { ASIA as SAMPLE } from "../data/mockAS";
+import { mockData } from "../data/mockData";
 import { useQuery } from "@tanstack/react-query";
 
 export const Quiz = ({ continent }) => {
-  const [flashcards, setFlashcards] = useState(SAMPLE);
+  const [flashcards, setFlashcards] = useState(mockData);
   const baseUrl = "https://country-facts.p.rapidapi.com/region";
   const url = `/${continent}`;
 

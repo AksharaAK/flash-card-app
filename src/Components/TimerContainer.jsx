@@ -83,7 +83,6 @@ export const TimerContainer = () => {
     };
 
     const initTimer = () => {
-      console.log("initTimer called");
       secsLeftRef.current = settingsInfo.workMins * 60;
       setSecsLeft(secsLeftRef.current);
     };
@@ -98,7 +97,7 @@ export const TimerContainer = () => {
         return switchMode();
       }
       tick();
-    }, 100);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [settingsInfo]);
