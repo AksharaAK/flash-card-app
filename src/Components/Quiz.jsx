@@ -33,7 +33,7 @@ export const Quiz = ({ continent }) => {
         return {
           id: index,
           country: countryItem.name.common,
-          capital: countryItem.capital,
+          capital: countryItem.capital.map((city) => `${city}\n`),
           flag: countryItem.flag,
         };
       })
