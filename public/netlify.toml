@@ -2,3 +2,9 @@
     from = "/*"
     to = "/index.html"
     status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-RapidAPI-Key = process.env.REACT_APP_RAPIDAPIKEY
+    X-RapidAPI-Host = process.env.REACT_APP_RAPIDAPIHOST
