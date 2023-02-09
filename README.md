@@ -61,7 +61,7 @@ This is the first time I've tried my hand at using `Tailwind`. Tailwind is a CSS
 For this project, an important feature was the card flipping front-to-back. Though the `rotate-x-`/`rotate-y-`, `transform` styles needed for card flip were not handled by the framework, creating custom utility classes and plugins was intuitive and straightforward. 
 
 ### Deploy
-[Check out the deployed website here -> ](http://flashcardappak.s3-website-us-east-1.amazonaws.com/flags)  
+[Check out the deployed website here -> ](https://around-the-world-quiz.netlify.app/)  
 
 ### Scope for improvement 
 - Though `create-react-app` is an extremely useful tool to setup and work with React, there are other alternatives that provide a faster developer experience, built in features like server-side generation and easier typescript support. Excited to try out Vite or Nextjs on my next project. 
